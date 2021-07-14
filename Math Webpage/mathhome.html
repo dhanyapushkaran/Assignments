@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="./mathScript.js" defer></script>
+    <script src="./Mathscript1.js" defer></script>
+    <script src="https://kit.fontawesome.com/62986ed2cd.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+    .col_1{
+    font-family: 'Dancing Script', cursive;
+    padding-top: 5px;
+    padding-left: 80px;
+    font-size: 70px;
+}
+#calc {
+    width: 300px;
+    height: 250px;
+    padding-top: 10px;
+    padding-left: 200px;
+    position: relative;
+    top: 50px;
+    left: 25px;
+    
+}
+.btn { font-weight: bold;
+    width: 95%;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: rgb(196, 193, 193);
+}
+.btn_1{
+    background-color: rgba(28, 138, 132, 0.986);
+}
+.box{ padding-top: 10px;
+  background-color: rgb(77, 74, 74);
+    border-radius: 15%;
+    width: 350px; height: 450px;
+    border: 1px solid rgb(8, 8, 8);
+    position:absolute
+    
+    
+}
+</style>
+</head>
+
+<body style="background-image: url(./images/1588916176.jpg);">
+  <div style="background-color: rgb(16, 17, 17); height: 30px; "> 
+    <div class="row">
+      <div class="col">
+        <span style="color: rgb(244, 244, 245);"> Have any question? <a href="#" style="text-decoration: none;"><i class="fas fa-phone"></i>+91 8735 601 451</a> </span>
+        <span><a href="#" style="text-decoration: none; padding-left: 10px;"> <i class="far fa-envelope"></i>dhanyapushkaran@gmail.com</a></span>
+      </div>
+            <div class="col">
+        <a href="" style="float: right; padding-right: 10px;" ><i class="fab fa-facebook" ></i></a>
+    <a href="" style="float: right;padding-right: 15px";><i class="fab fa-instagram-square"></i></a>
+    <a href="" style="float: right;padding-right: 15px"><i class="fab fa-twitter"></i></a>
+      </div>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <img src="./images/2117721.png" alt="" style="width: 50px; height: 50px;">
+        <div class="container-fluid" style="font-weight: bold; font-size: large;">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="" data-bs-toggle="modal" data-bs-target="#exampleModal1">Student Grade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Factorial</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Reverse String</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"href="javascript:amstrong()" >Amstrong Numbers</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active"href="javascript:notes()" >Notes</a>
+                    </li> -->
+                    <li >
+                        <a class="nav-link" href="javascript:logout()" id="litem"></a>
+                                     
+                    </li>
+                 
+               
+                 
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Insert String</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="str">
+          <h4 id="res"></h4>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="Rsrting()">submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Modal2 -->
+ <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter student Mark</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Maths" id="math">
+          <input type="text" placeholder="science" id="sci">
+          <input type="text" placeholder="Social" id="soc">
+          <input type="text" placeholder="English" id="eng">
+          <input type="text" placeholder="IT" id="it">
+
+          <h4 id="avg" style="color: red;"></h4>
+          <h4 id="grade" style="color: red;"></h4>
+        </div>
+        <div class="modal-footer">
+            <button type="button" onclick="findAvg()" class="btn btn-primary">submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal3 -->
+ <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter Number</h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" placeholder="Number" id="fact">
+           <h4 id="factor" style="color: red;"></h4>
+        </div>
+        <div class="modal-footer">
+            <button type="button" onclick="factorial()" class="btn btn-primary">submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+       <div class="col-6" style="padding-top: 60px; padding-left: 100px;">
+       <h4 style="background-color: white; text-align: center;">List of mathematical constants</h4>
+       <table class="table table-dark table-striped">
+         <tr>
+           <th>Name</th>
+           <th>Symbol</th>
+           <th>Decimal Expansion</th>
+           <th>Formula</th>
+         </tr>
+         <tr>
+           <td>Pi</td>
+           <td>π</td>
+           <td>3.14159 26535 89793 23846</td>
+           <td>Ratio of a circle's circumference to its diameter</td>
+         </tr>
+         <tr>
+           <td>Phi</td>
+           <td>Φ</td>
+           <td>1.61803 39887 49894 84820 </td>
+           <td>Positive root of x^{2}-x-1=0</td>
+         </tr>
+         <tr>
+          <td>Imaginary Unit</td>
+          <td>i</td>
+          <td>0 + 1i</td>
+          <td>Either of the two roots ofx^{2}=-1</td>
+        </tr>
+        <tr>
+          <td>Euler's number</td>
+          <td>e</td>
+          <td>	2.71828 18284 59045 23536</td>
+          <td><img src="./log.png" alt="" style="width: 150px; height: 50px;"></td>
+        </tr>
+        <tr>
+          <td>Euler-Mascheroni </td>
+          <td>Υ</td>
+          <td>0.577 215 664 901 532 860 606 512</td>
+          <td>	Ln→∞{(1+1/2+1/3+...1/n) - log(n)} </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+       </table>
+    </div>
+    <div class="col-6" id="calc">
+        
+        <div class="box">
+          <h4 style="color: white; padding-left: 100px;">CALCULATOR</h4>
+            <!-- <h1 style="padding-left: 15px;" >CALCULATOR</h1> -->
+             <table id="calc">
+                 <tr>
+                     <td colspan="4"><input  type="text" id="inpt" style=" width: 98%; height: 80px;"></td>
+                 </tr>
+                 <tr>
+                     <td><input type="button" class="btn btn_1" value="C" onclick="clearBox()"></td>
+                     <td><input type="button" class="btn btn_1" value="<-" onclick="DeleteNumber()"></td>
+                     <td><input type="button" class="btn btn_1" value="/" onclick="displayNumber('/')"></td>
+                     <td><input type="button" class="btn btn_1" value="X" onclick="displayNumber('*')"></td>
+                 </tr>
+                 <tr>
+                     <td><input type="button"class="btn" value="7" onclick="displayNumber('7')"></td>
+                     <td><input type="button"class="btn" value="8" onclick="displayNumber('8')"></td>
+                     <td><input type="button"class="btn" value="9" onclick="displayNumber('9')"></td>
+                     <td><input type="button"class="btn btn_1" value="-" onclick="displayNumber('-')"></td>
+                 </tr>
+                 <tr>
+                     <td><input type="button"class="btn" value="4" onclick="displayNumber('4')"></td>
+                     <td><input type="button" class="btn"value="5" onclick="displayNumber('5')"></td>
+                     <td><input type="button"class="btn" value="6" onclick="displayNumber('6')"></td>
+                     <td><input type="button"class="btn btn_1" value="+" onclick="displayNumber('+')"></td>
+                 </tr>
+                 <tr>
+                     <td><input type="button"class="btn" value="3" onclick="displayNumber('3')"></td>
+                     <td><input type="button"class="btn" value="2" onclick="displayNumber('2')"></td>
+                     <td><input type="button"class="btn" value="1" onclick="displayNumber('1')"></td>
+                     <td rowspan="2"><input type="button" class="btn btn_1" value="=" style="height: 100px;" onclick="evaluateEqual()"></td>
+                 </tr>
+                 <tr>
+                     <td colspan="2"><input class="btn" type="button" value="0" onclick="displayNumber('0')"></td>
+                     <td><input class="btn" type="button" value="." onclick="displayNumber('.')"></td>
+                 </tr>
+             </table>
+            </div>
+    </div>
+  </div>
+</body>
+
+</html>
